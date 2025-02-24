@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Survey</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: lightblue;
+      font-family: Roboto, Arial;
+      height: 1000px;
+    }
+
+    .Survey {
+      color: white;
+    }
+
+    .main {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-height: 5000px;
+      width: clamp(150px, 50%, 300px);
+      border-radius: 10px;
+      border: 2px solid black;
+      margin-bottom: 30px;
+    }
+
+    .question {
+      background-color: #00FFFF;
+      border-radius: 10px 10px 0 0;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+    }
+
+    .ans {
+      background-color: white;
+      border-radius: 0 0 10px 10px;
+      border-width: 1px solid black;
+      height: 65px;
+      margin-top: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .answer {
+      border-radius: 0 0 10px 10px;
+      border: none;
+      width: 100%;
+      min-height: 94%;
+      font-size: 15px;
+      color: black;
+      text-align: center;
+      resize: none;
+      position: relative;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &::placeholder {
+        color: C0C0C0;
+        font-size: 15px;
+      }
+    }
+
+    .q {
+      max-width: 500px;
+    }
+
+    .Done-button {
+      background-color: white;
+      color: black;
+      padding: 12px 25px;
+      border: 2px solid black;
+      border-radius: 10px;
+      position: absolute;
+      bottom: -60px;
+    }
+
+    .Done-button:hover:before {
+      color: black;
+      border: none;
+      content: "Sosal?";
+      padding-left: 25px;
+      display: inline-block;
+    }
+
+    .Done-button:hover {
+      color: white;
+      padding: 15px 10px;
+    }
+
+    .Done-button:active:before {
+      color: black;
+      border: none;
+      content: "not sigma";
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="Survey">Survey</h1>
+
+  <div class="main">
+    <div class="question">
+      <div class="q">
+        <b>What is your name?</b>
+      </div>
+    </div>
+    <div class="ans">
+      <textarea class="answer" placeholder="Your answer..."></textarea>
+    </div>
+  </div>
+    <div class="main">
+      <div class="question">
+        <div class="q">
+          <b>How old are you?</b>
+        </div>
+      </div>
+      <div class="ans">
+        <textarea class="answer" placeholder="Your answer..."></textarea>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="question">
+        <div class="q">
+          <b>Male or Female?</b>
+        </div>
+      </div>
+      <div class="ans">
+        <textarea class="answer" placeholder="Your answer..."></textarea>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="question">
+        <div class="q">
+          <b>What is your future goal?</b>
+        </div>
+      </div>
+      <div class="ans">
+        <textarea class="answer" placeholder="Your answer..."></textarea>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="question">
+        <div class="q">
+          <b>How much income you want?</b>
+        </div>
+      </div>
+      <div class="ans">
+        <textarea class="answer" placeholder="Your answer..."></textarea>
+        <button class="Done-button">Done</button>
+      </div>
+    </div>
+
+</body>

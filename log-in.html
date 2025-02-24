@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Log in</title> 
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .wrapper {
+      width: 250px;
+      height: 250px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-2,
+    .input-1 {
+      padding: 15px 15px;
+      margin-bottom: 5px;
+      background-color: rgb(223, 223, 223);
+      border: none;
+      align-items: center;
+      width: 220px;
+    }
+
+    .log-in {
+      background: #4CAF50;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: none;
+      color: white;
+      margin-top: 10px;
+      width: 250px;
+      font-family: Arial;
+      font-size: 10px;
+      align-items: center;
+    }
+
+    .log-in:hover {
+      background: #45a049;
+      cursor: pointer;
+    }
+
+    .register:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body style="background-color: rgb(113, 233, 129); padding-left: 400px;">
+  <div class="wrapper">
+    <div class="head">
+      <h1>Log in</h1>
+    </div>
+    <div class="form">
+      <div class="info">
+        <input type="text" placeholder="username" class="input-1">
+        <input type="password" placeholder="password" class="input-2">
+      </div>
+      <button class="log-in">LOG IN</button>
+      <p style="font-size: 13px;">Not have an account? <span class="register" style="color: blue;">Register now</span></p>
+    </div>
+  </div>
+</body>
+</html>
