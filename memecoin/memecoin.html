@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitcoin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      font-family: Roboto, Arial;
+      color: white;
+    }
+    h1{
+      font-size: 500%;
+      margin: 10% 0;
+    }
+    .main{
+      background-color: black;
+      width: clamp(600px, 100%, 100%);
+      height: 750px;
+      display: grid;
+      grid-auto-flow: rows;
+      grid-template-rows: 45% 20% repeat(3, 30%);
+      grid-template-columns: repeat(auto, minmax(293px, 1fr)); 
+    }
+    .intro{
+      text-align: center;
+    }
+    .quote{
+      max-width:250px;
+      display: inline-block;
+      font-size: 25px;
+      margin-top: 0;
+    }
+    .main-pic{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .nitpic{
+      grid-row: span 2;
+    }
+    .learn-more{
+      grid-area: 2/1/2/2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } 
+    .lm{
+      font-size: 175%;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 5px 15px;
+      transition: color, background-color 500ms;
+      color: white;
+      background-color: inherit; 
+    }
+    .lm:hover{
+      color: black;
+      background-color: white;
+      cursor: pointer;
+    }
+    .lm:active{
+      opacity: 0.7;
+    }
+    .bottom-section{
+      grid-column: span 2;
+      display: flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content: space-evenly;
+      flex-direction: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    @media (max-width: 600px) {
+        .bottom-section{
+            grid-column: auto;
+            grid-row: span 2; 
+        }
+    } 
+    .bottom{
+        flex: 1;
+        min-width: 180px;
+        text-align: center;
+        border: 1px solid white;
+        height: 100%;
+        max-width: 450px;
+    }
+    #goals{
+        display: grid;
+        grid-template-rows: 20% 80%;
+        text-align: center;
+        justify-content: center;
+        grid-template-columns: 1fr;
+    }
+    .goals-box{
+        font-size: 120%;
+    }
+    .header-goals, .creators-header{
+      font-size: 170%;
+      border: 1px solid white;
+    }
+    .yet{
+      padding: 5px 5px;
+      font-size: large;
+      background-color: inherit;
+      border: none;
+      transition: 500ms ease-in-out;
+    }
+    .yet:hover{
+      color: White;
+    }
+    #creators{
+      text-align: center;
+      display: grid;
+      grid-template-rows: 20% 80%;
+    }
+    .c-img{
+      width: 125px;
+      height: 125px;
+      object-fit: cover;
+      object-position: left;
+      border-radius: 150%;
+    }
+    .creators-name{
+        font-size: 150%;
+        margin-bottom: 5px;
+    }
+    @media (max-width: 390px) {
+        .bottom {
+            height: 50%;
+        }
+        .yet{
+            margin-top: 19px;
+        }
+    }
+    #g{
+        margin-bottom: 0;
+    }
+    #buy-sell{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      text-align: center;
+      font-size: 150%;
+      color: white;
+    }
+    .buy, .sell{
+      border: 1px solid white;
+      display: grid;
+      grid-template-rows: 33% 33% 33%;
+      align-items: center;
+      justify-content: center;
+    }
+    .bs{
+      font-size: 80%;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 5px 15px;
+      transition: color, background-color 500ms;
+      color: white;
+      background-color: inherit; 
+    }
+    .bs:hover{
+      color: black;
+      background-color: white;
+      cursor: pointer;
+    }
+    .bs:active{
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+        <div class="intro"><h1>Nitcoin</h1> <p class="quote">Never be the one who thinks he is better than anyone</p></div>
+        <div class="nitpic"><img class="main-pic" src="main.jpg"></div>
+        <div class="learn-more"><button class="lm">Learn more</button></div>
+        <div class="bottom-section">
+            <div id="goals" class="bottom">
+                <div class="header-goals">Goals</div>
+                    <div class="goals-box">
+                        <p id="g">
+                            &#x2022; We <br>
+                            &#x2022; Don't <br>
+                            &#x2022; Have <br>
+                            &#x2022; Any <br>
+                            &#x2022; Goals <br>
+                        </p>
+                        <button class="yet">Yet</button>
+                    </div>
+            </div>
+            <div id="creators" class="bottom">
+                <div class="creators-header">Creators</div>
+                <div class="creators-info">
+                    <div class="creators-name">Didar</div>
+                    <div class="creators-picture"><img class="c-img"src="didar.jpg"></div>
+                </div>
+            </div>
+            <div id="buy-sell" class="bottom">
+              <div class="buy">
+                <p>Buy NIT</p>
+                &#127775;
+                <button class="bs">Buy</button>
+              </div>
+              <div class="sell">
+                <p>Sell NIT</p>
+                ⚡
+                <button class="bs">Sell</button>
+              </div>
+            </div>
+        </div>
+  </div>
+</body>
+</html>
